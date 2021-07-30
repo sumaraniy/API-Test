@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "21f2b0b3-a8f9-4e27-a36b-ff2d1ab25b1d",
+		"name": "API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status-200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status Code is 200', () =>{\r",
+							"    if(pm.response.code == 200){\r",
+							"        console.log(\"Status code is : 200 :: PASS\")\r",
+							"    }\r",
+							"    else\r",
+							"    console.log(\"Status is not 200 :: FAIL\")\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"1fc80820c72b0163bc9c7536",
+						"latest",
+						"USD"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Status-200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"1fc80820c72b0163bc9c7536",
+								"latest",
+								"USD"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jul 2021 09:13:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "NOSNIFF"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=dyMy3A5n%2Fs6UcwGLROCfSy%2F1bLBzc23xFD4yTi7WgvH7SNedpePBLtLFKGoM4pG3k8Mw9hxh3HKz2Mc5K5Fwr2SCBcW%2FZ%2BVZl3CgRoGMaQvnepZ1Gki%2FDOjK0DNOitimQhs6jP4kXy6e\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "676d79540bde2d13-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"success\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms_of_use\": \"https://www.exchangerate-api.com/terms\",\n    \"time_last_update_unix\": 1627603201,\n    \"time_last_update_utc\": \"Fri, 30 Jul 2021 00:00:01 +0000\",\n    \"time_next_update_unix\": 1627689601,\n    \"time_next_update_utc\": \"Sat, 31 Jul 2021 00:00:01 +0000\",\n    \"base_code\": \"USD\",\n    \"conversion_rates\": {\n        \"USD\": 1,\n        \"AED\": 3.6725,\n        \"AFN\": 79.8628,\n        \"ALL\": 102.8492,\n        \"AMD\": 485.3617,\n        \"ANG\": 1.79,\n        \"AOA\": 644.5755,\n        \"ARS\": 96.627,\n        \"AUD\": 1.353,\n        \"AWG\": 1.79,\n        \"AZN\": 1.6991,\n        \"BAM\": 1.6415,\n        \"BBD\": 2,\n        \"BDT\": 84.776,\n        \"BGN\": 1.6433,\n        \"BHD\": 0.376,\n        \"BIF\": 1973.8965,\n        \"BMD\": 1,\n        \"BND\": 1.3532,\n        \"BOB\": 6.8829,\n        \"BRL\": 5.1018,\n        \"BSD\": 1,\n        \"BTN\": 74.2819,\n        \"BWP\": 11.0859,\n        \"BYN\": 2.5101,\n        \"BZD\": 2,\n        \"CAD\": 1.2462,\n        \"CDF\": 1986.6175,\n        \"CHF\": 0.9076,\n        \"CLP\": 763.4279,\n        \"CNY\": 6.465,\n        \"COP\": 3867.4841,\n        \"CRC\": 619.0953,\n        \"CUC\": 1,\n        \"CUP\": 25.75,\n        \"CVE\": 92.5455,\n        \"CZK\": 21.5295,\n        \"DJF\": 177.721,\n        \"DKK\": 6.2615,\n        \"DOP\": 56.8612,\n        \"DZD\": 134.747,\n        \"EGP\": 15.7103,\n        \"ERN\": 15,\n        \"ETB\": 44.3534,\n        \"EUR\": 0.8395,\n        \"FJD\": 2.0838,\n        \"FKP\": 0.7158,\n        \"FOK\": 6.2615,\n        \"GBP\": 0.7158,\n        \"GEL\": 3.1133,\n        \"GGP\": 0.7158,\n        \"GHS\": 5.9706,\n        \"GIP\": 0.7158,\n        \"GMD\": 51.864,\n        \"GNF\": 9773.3597,\n        \"GTQ\": 7.7382,\n        \"GYD\": 209.0839,\n        \"HKD\": 7.7721,\n        \"HNL\": 23.6812,\n        \"HRK\": 6.3237,\n        \"HTG\": 95.1964,\n        \"HUF\": 302.7695,\n        \"IDR\": 14550.162,\n        \"ILS\": 3.2556,\n        \"IMP\": 0.7158,\n        \"INR\": 74.2822,\n        \"IQD\": 1457.945,\n        \"IRR\": 41937.6951,\n        \"ISK\": 124.3521,\n        \"JMD\": 155.1082,\n        \"JOD\": 0.709,\n        \"JPY\": 109.6697,\n        \"KES\": 108.5301,\n        \"KGS\": 84.4388,\n        \"KHR\": 4068.8255,\n        \"KID\": 1.353,\n        \"KMF\": 412.9087,\n        \"KRW\": 1147.368,\n        \"KWD\": 0.2996,\n        \"KYD\": 0.8333,\n        \"KZT\": 424.9871,\n        \"LAK\": 9499.6794,\n        \"LBP\": 1507.5,\n        \"LKR\": 199.2087,\n        \"LRD\": 171.6131,\n        \"LSL\": 14.5968,\n        \"LYD\": 4.5183,\n        \"MAD\": 8.919,\n        \"MDL\": 17.9387,\n        \"MGA\": 3809.83,\n        \"MKD\": 52.0989,\n        \"MMK\": 1645.4749,\n        \"MNT\": 2847.5821,\n        \"MOP\": 8.0053,\n        \"MRU\": 36.117,\n        \"MUR\": 42.8069,\n        \"MVR\": 15.4362,\n        \"MWK\": 810.9666,\n        \"MXN\": 19.8682,\n        \"MYR\": 4.2343,\n        \"MZN\": 63.884,\n        \"NAD\": 14.5968,\n        \"NGN\": 424.2497,\n        \"NIO\": 35.2483,\n        \"NOK\": 8.7572,\n        \"NPR\": 118.851,\n        \"NZD\": 1.4298,\n        \"OMR\": 0.3845,\n        \"PAB\": 1,\n        \"PEN\": 3.9239,\n        \"PGK\": 3.512,\n        \"PHP\": 50.2845,\n        \"PKR\": 162.0083,\n        \"PLN\": 3.8609,\n        \"PYG\": 6933.7512,\n        \"QAR\": 3.64,\n        \"RON\": 4.1448,\n        \"RSD\": 99.1331,\n        \"RUB\": 73.2862,\n        \"RWF\": 1006.0184,\n        \"SAR\": 3.75,\n        \"SBD\": 7.9434,\n        \"SCR\": 15.5833,\n        \"SDG\": 447.1031,\n        \"SEK\": 8.567,\n        \"SGD\": 1.3532,\n        \"SHP\": 0.7158,\n        \"SLL\": 10263.3171,\n        \"SOS\": 578.1506,\n        \"SRD\": 21.3256,\n        \"SSP\": 177.6426,\n        \"STN\": 20.5629,\n        \"SYP\": 1473.2413,\n        \"SZL\": 14.5968,\n        \"THB\": 32.884,\n        \"TJS\": 11.3382,\n        \"TMT\": 3.4973,\n        \"TND\": 2.7707,\n        \"TOP\": 2.2446,\n        \"TRY\": 8.4921,\n        \"TTD\": 6.7767,\n        \"TVD\": 1.353,\n        \"TWD\": 27.9151,\n        \"TZS\": 2316.1666,\n        \"UAH\": 26.8471,\n        \"UGX\": 3547.4509,\n        \"UYU\": 43.6679,\n        \"UZS\": 10730.2499,\n        \"VES\": 3978505.7162,\n        \"VND\": 22884.6089,\n        \"VUV\": 111.4797,\n        \"WST\": 2.5643,\n        \"XAF\": 550.545,\n        \"XCD\": 2.7,\n        \"XDR\": 0.7007,\n        \"XOF\": 550.545,\n        \"XPF\": 100.1554,\n        \"YER\": 250.3916,\n        \"ZAR\": 14.5973,\n        \"ZMW\": 19.2105\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Currency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response matches string GBP\", function () {\r",
+							"    pm.expect(pm.response.text());\r",
+							"    console.log(\"Response contains string GBP\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"1fc80820c72b0163bc9c7536",
+						"latest",
+						"USD"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Currency",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"1fc80820c72b0163bc9c7536",
+								"latest",
+								"USD"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jul 2021 10:45:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "NOSNIFF"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=7WygnUV68PDRl5c2ts9Bfe28UdoBNC%2Bqrfrgnht%2FGap47Yo8qRu5HVbguSzRpFkpaxHzNmuUb7EG8MASqJ%2BpzvglTbkSHjhNypDR%2BOZQJD46mWmGlDFAXeow0Wu7gj5CoE9fo6njRmu%2F\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "676dff9e0fc406e1-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"success\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms_of_use\": \"https://www.exchangerate-api.com/terms\",\n    \"time_last_update_unix\": 1627603201,\n    \"time_last_update_utc\": \"Fri, 30 Jul 2021 00:00:01 +0000\",\n    \"time_next_update_unix\": 1627689601,\n    \"time_next_update_utc\": \"Sat, 31 Jul 2021 00:00:01 +0000\",\n    \"base_code\": \"USD\",\n    \"conversion_rates\": {\n        \"USD\": 1,\n        \"AED\": 3.6725,\n        \"AFN\": 79.8628,\n        \"ALL\": 102.8492,\n        \"AMD\": 485.3617,\n        \"ANG\": 1.79,\n        \"AOA\": 644.5755,\n        \"ARS\": 96.627,\n        \"AUD\": 1.353,\n        \"AWG\": 1.79,\n        \"AZN\": 1.6991,\n        \"BAM\": 1.6415,\n        \"BBD\": 2,\n        \"BDT\": 84.776,\n        \"BGN\": 1.6433,\n        \"BHD\": 0.376,\n        \"BIF\": 1973.8965,\n        \"BMD\": 1,\n        \"BND\": 1.3532,\n        \"BOB\": 6.8829,\n        \"BRL\": 5.1018,\n        \"BSD\": 1,\n        \"BTN\": 74.2819,\n        \"BWP\": 11.0859,\n        \"BYN\": 2.5101,\n        \"BZD\": 2,\n        \"CAD\": 1.2462,\n        \"CDF\": 1986.6175,\n        \"CHF\": 0.9076,\n        \"CLP\": 763.4279,\n        \"CNY\": 6.465,\n        \"COP\": 3867.4841,\n        \"CRC\": 619.0953,\n        \"CUC\": 1,\n        \"CUP\": 25.75,\n        \"CVE\": 92.5455,\n        \"CZK\": 21.5295,\n        \"DJF\": 177.721,\n        \"DKK\": 6.2615,\n        \"DOP\": 56.8612,\n        \"DZD\": 134.747,\n        \"EGP\": 15.7103,\n        \"ERN\": 15,\n        \"ETB\": 44.3534,\n        \"EUR\": 0.8395,\n        \"FJD\": 2.0838,\n        \"FKP\": 0.7158,\n        \"FOK\": 6.2615,\n        \"GBP\": 0.7158,\n        \"GEL\": 3.1133,\n        \"GGP\": 0.7158,\n        \"GHS\": 5.9706,\n        \"GIP\": 0.7158,\n        \"GMD\": 51.864,\n        \"GNF\": 9773.3597,\n        \"GTQ\": 7.7382,\n        \"GYD\": 209.0839,\n        \"HKD\": 7.7721,\n        \"HNL\": 23.6812,\n        \"HRK\": 6.3237,\n        \"HTG\": 95.1964,\n        \"HUF\": 302.7695,\n        \"IDR\": 14550.162,\n        \"ILS\": 3.2556,\n        \"IMP\": 0.7158,\n        \"INR\": 74.2822,\n        \"IQD\": 1457.945,\n        \"IRR\": 41937.6951,\n        \"ISK\": 124.3521,\n        \"JMD\": 155.1082,\n        \"JOD\": 0.709,\n        \"JPY\": 109.6697,\n        \"KES\": 108.5301,\n        \"KGS\": 84.4388,\n        \"KHR\": 4068.8255,\n        \"KID\": 1.353,\n        \"KMF\": 412.9087,\n        \"KRW\": 1147.368,\n        \"KWD\": 0.2996,\n        \"KYD\": 0.8333,\n        \"KZT\": 424.9871,\n        \"LAK\": 9499.6794,\n        \"LBP\": 1507.5,\n        \"LKR\": 199.2087,\n        \"LRD\": 171.6131,\n        \"LSL\": 14.5968,\n        \"LYD\": 4.5183,\n        \"MAD\": 8.919,\n        \"MDL\": 17.9387,\n        \"MGA\": 3809.83,\n        \"MKD\": 52.0989,\n        \"MMK\": 1645.4749,\n        \"MNT\": 2847.5821,\n        \"MOP\": 8.0053,\n        \"MRU\": 36.117,\n        \"MUR\": 42.8069,\n        \"MVR\": 15.4362,\n        \"MWK\": 810.9666,\n        \"MXN\": 19.8682,\n        \"MYR\": 4.2343,\n        \"MZN\": 63.884,\n        \"NAD\": 14.5968,\n        \"NGN\": 424.2497,\n        \"NIO\": 35.2483,\n        \"NOK\": 8.7572,\n        \"NPR\": 118.851,\n        \"NZD\": 1.4298,\n        \"OMR\": 0.3845,\n        \"PAB\": 1,\n        \"PEN\": 3.9239,\n        \"PGK\": 3.512,\n        \"PHP\": 50.2845,\n        \"PKR\": 162.0083,\n        \"PLN\": 3.8609,\n        \"PYG\": 6933.7512,\n        \"QAR\": 3.64,\n        \"RON\": 4.1448,\n        \"RSD\": 99.1331,\n        \"RUB\": 73.2862,\n        \"RWF\": 1006.0184,\n        \"SAR\": 3.75,\n        \"SBD\": 7.9434,\n        \"SCR\": 15.5833,\n        \"SDG\": 447.1031,\n        \"SEK\": 8.567,\n        \"SGD\": 1.3532,\n        \"SHP\": 0.7158,\n        \"SLL\": 10263.3171,\n        \"SOS\": 578.1506,\n        \"SRD\": 21.3256,\n        \"SSP\": 177.6426,\n        \"STN\": 20.5629,\n        \"SYP\": 1473.2413,\n        \"SZL\": 14.5968,\n        \"THB\": 32.884,\n        \"TJS\": 11.3382,\n        \"TMT\": 3.4973,\n        \"TND\": 2.7707,\n        \"TOP\": 2.2446,\n        \"TRY\": 8.4921,\n        \"TTD\": 6.7767,\n        \"TVD\": 1.353,\n        \"TWD\": 27.9151,\n        \"TZS\": 2316.1666,\n        \"UAH\": 26.8471,\n        \"UGX\": 3547.4509,\n        \"UYU\": 43.6679,\n        \"UZS\": 10730.2499,\n        \"VES\": 3978505.7162,\n        \"VND\": 22884.6089,\n        \"VUV\": 111.4797,\n        \"WST\": 2.5643,\n        \"XAF\": 550.545,\n        \"XCD\": 2.7,\n        \"XDR\": 0.7007,\n        \"XOF\": 550.545,\n        \"XPF\": 100.1554,\n        \"YER\": 250.3916,\n        \"ZAR\": 14.5973,\n        \"ZMW\": 19.2105\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Total Count",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"function countObjectKeys(obj){\r",
+							"    return Object.keys(obj).length;\r",
+							"}\r",
+							"var responseJson=JSON.parse(JSON.stringify(pm.response.json()));\r",
+							"console.log(countObjectKeys(responseJson.conversion_rates));\r",
+							"\r",
+							"\r",
+							"pm.test('Currency count is above 159',()=>{\r",
+							"let count =Object.keys(pm.response.json().conversion_rates).length\r",
+							"pm.expect(count).to.be.above(159);\r",
+							"console.log(count);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"1fc80820c72b0163bc9c7536",
+						"latest",
+						"USD"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Total Count",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"1fc80820c72b0163bc9c7536",
+								"latest",
+								"USD"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jul 2021 15:14:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "NOSNIFF"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=HVjlpCeStUr5aIJuJlCjpLgE%2B7F3Y2VJTZT7P9kTPd%2FltyS%2Fk1qev1iS8qxZ5l%2Btd96SWobgiLdgiJtBqhWSc2muMsgv4taVXLTeToN4SURljX%2F33dtOHq8VB8hjlemrmdskiLEggoRO\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "676f88fd1e8be658-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"success\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms_of_use\": \"https://www.exchangerate-api.com/terms\",\n    \"time_last_update_unix\": 1627603201,\n    \"time_last_update_utc\": \"Fri, 30 Jul 2021 00:00:01 +0000\",\n    \"time_next_update_unix\": 1627689601,\n    \"time_next_update_utc\": \"Sat, 31 Jul 2021 00:00:01 +0000\",\n    \"base_code\": \"USD\",\n    \"conversion_rates\": {\n        \"USD\": 1,\n        \"AED\": 3.6725,\n        \"AFN\": 79.8628,\n        \"ALL\": 102.8492,\n        \"AMD\": 485.3617,\n        \"ANG\": 1.79,\n        \"AOA\": 644.5755,\n        \"ARS\": 96.627,\n        \"AUD\": 1.353,\n        \"AWG\": 1.79,\n        \"AZN\": 1.6991,\n        \"BAM\": 1.6415,\n        \"BBD\": 2,\n        \"BDT\": 84.776,\n        \"BGN\": 1.6433,\n        \"BHD\": 0.376,\n        \"BIF\": 1973.8965,\n        \"BMD\": 1,\n        \"BND\": 1.3532,\n        \"BOB\": 6.8829,\n        \"BRL\": 5.1018,\n        \"BSD\": 1,\n        \"BTN\": 74.2819,\n        \"BWP\": 11.0859,\n        \"BYN\": 2.5101,\n        \"BZD\": 2,\n        \"CAD\": 1.2462,\n        \"CDF\": 1986.6175,\n        \"CHF\": 0.9076,\n        \"CLP\": 763.4279,\n        \"CNY\": 6.465,\n        \"COP\": 3867.4841,\n        \"CRC\": 619.0953,\n        \"CUC\": 1,\n        \"CUP\": 25.75,\n        \"CVE\": 92.5455,\n        \"CZK\": 21.5295,\n        \"DJF\": 177.721,\n        \"DKK\": 6.2615,\n        \"DOP\": 56.8612,\n        \"DZD\": 134.747,\n        \"EGP\": 15.7103,\n        \"ERN\": 15,\n        \"ETB\": 44.3534,\n        \"EUR\": 0.8395,\n        \"FJD\": 2.0838,\n        \"FKP\": 0.7158,\n        \"FOK\": 6.2615,\n        \"GBP\": 0.7158,\n        \"GEL\": 3.1133,\n        \"GGP\": 0.7158,\n        \"GHS\": 5.9706,\n        \"GIP\": 0.7158,\n        \"GMD\": 51.864,\n        \"GNF\": 9773.3597,\n        \"GTQ\": 7.7382,\n        \"GYD\": 209.0839,\n        \"HKD\": 7.7721,\n        \"HNL\": 23.6812,\n        \"HRK\": 6.3237,\n        \"HTG\": 95.1964,\n        \"HUF\": 302.7695,\n        \"IDR\": 14550.162,\n        \"ILS\": 3.2556,\n        \"IMP\": 0.7158,\n        \"INR\": 74.2822,\n        \"IQD\": 1457.945,\n        \"IRR\": 41937.6951,\n        \"ISK\": 124.3521,\n        \"JMD\": 155.1082,\n        \"JOD\": 0.709,\n        \"JPY\": 109.6697,\n        \"KES\": 108.5301,\n        \"KGS\": 84.4388,\n        \"KHR\": 4068.8255,\n        \"KID\": 1.353,\n        \"KMF\": 412.9087,\n        \"KRW\": 1147.368,\n        \"KWD\": 0.2996,\n        \"KYD\": 0.8333,\n        \"KZT\": 424.9871,\n        \"LAK\": 9499.6794,\n        \"LBP\": 1507.5,\n        \"LKR\": 199.2087,\n        \"LRD\": 171.6131,\n        \"LSL\": 14.5968,\n        \"LYD\": 4.5183,\n        \"MAD\": 8.919,\n        \"MDL\": 17.9387,\n        \"MGA\": 3809.83,\n        \"MKD\": 52.0989,\n        \"MMK\": 1645.4749,\n        \"MNT\": 2847.5821,\n        \"MOP\": 8.0053,\n        \"MRU\": 36.117,\n        \"MUR\": 42.8069,\n        \"MVR\": 15.4362,\n        \"MWK\": 810.9666,\n        \"MXN\": 19.8682,\n        \"MYR\": 4.2343,\n        \"MZN\": 63.884,\n        \"NAD\": 14.5968,\n        \"NGN\": 424.2497,\n        \"NIO\": 35.2483,\n        \"NOK\": 8.7572,\n        \"NPR\": 118.851,\n        \"NZD\": 1.4298,\n        \"OMR\": 0.3845,\n        \"PAB\": 1,\n        \"PEN\": 3.9239,\n        \"PGK\": 3.512,\n        \"PHP\": 50.2845,\n        \"PKR\": 162.0083,\n        \"PLN\": 3.8609,\n        \"PYG\": 6933.7512,\n        \"QAR\": 3.64,\n        \"RON\": 4.1448,\n        \"RSD\": 99.1331,\n        \"RUB\": 73.2862,\n        \"RWF\": 1006.0184,\n        \"SAR\": 3.75,\n        \"SBD\": 7.9434,\n        \"SCR\": 15.5833,\n        \"SDG\": 447.1031,\n        \"SEK\": 8.567,\n        \"SGD\": 1.3532,\n        \"SHP\": 0.7158,\n        \"SLL\": 10263.3171,\n        \"SOS\": 578.1506,\n        \"SRD\": 21.3256,\n        \"SSP\": 177.6426,\n        \"STN\": 20.5629,\n        \"SYP\": 1473.2413,\n        \"SZL\": 14.5968,\n        \"THB\": 32.884,\n        \"TJS\": 11.3382,\n        \"TMT\": 3.4973,\n        \"TND\": 2.7707,\n        \"TOP\": 2.2446,\n        \"TRY\": 8.4921,\n        \"TTD\": 6.7767,\n        \"TVD\": 1.353,\n        \"TWD\": 27.9151,\n        \"TZS\": 2316.1666,\n        \"UAH\": 26.8471,\n        \"UGX\": 3547.4509,\n        \"UYU\": 43.6679,\n        \"UZS\": 10730.2499,\n        \"VES\": 3978505.7162,\n        \"VND\": 22884.6089,\n        \"VUV\": 111.4797,\n        \"WST\": 2.5643,\n        \"XAF\": 550.545,\n        \"XCD\": 2.7,\n        \"XDR\": 0.7007,\n        \"XOF\": 550.545,\n        \"XPF\": 100.1554,\n        \"YER\": 250.3916,\n        \"ZAR\": 14.5973,\n        \"ZMW\": 19.2105\n    }\n}"
+				}
+			]
+		}
+	]
+}
